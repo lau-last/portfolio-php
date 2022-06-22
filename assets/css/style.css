@@ -1,0 +1,295 @@
+/* Générique */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: #333;
+    --graylight: #CECBCB;
+    --gray-text: #222;
+    --graylight-text: #a6a6a6;
+    --white-text: #fff;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /* 1 rem -> 10px */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-text);
+    background-color: #f2f2f2;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+span {
+    color: var(--graylight-text);
+}
+
+/* Header */
+header {
+    height: 9rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+
+header a {
+    color: var(--white-text);
+    font-size: 2.2rem;
+}
+
+#logo span {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+#menu li {
+    display: inline-block;
+    padding: 0 2rem;
+    text-transform: uppercase;
+}
+
+#menu li:hover {
+    opacity: .5;
+}
+
+#menu a {
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+}
+
+/* menu burger */
+#menu p {
+    display: none;
+}
+
+/* Banner */
+#banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/software.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white-text);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* #banner p{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+} */
+
+h1 {
+    font-size: 12rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* overlay */
+/* #banner::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+}
+h1, #banner p{
+    z-index: 1;
+} */
+header {
+    z-index: 99;
+}
+
+/* One */
+#one article {
+    width: 45rem;
+    margin: 2rem;
+    background-color: #fff;
+}
+
+#one article img {
+    width: 100%;
+}
+
+#one {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8rem;
+}
+
+.contentOne {
+    padding: 5rem;
+}
+
+.contentOne div {
+    text-align: center;
+}
+
+.surTitre {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: .25rem;
+    padding: 0 0 1.5rem 0;
+    color: var(--graylight-text);
+    font-weight: 200;
+    text-align: center;
+}
+
+.surTitre::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: .1rem;
+    background-color: var(--graylight);
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.oneDesc {
+    color: var(--graylight-text);
+    text-align: justify;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+
+.button {
+    margin-top: 4.5rem;
+    transition: transform .5s;
+}
+
+.button a {
+    border: .2rem solid #CECBCB;
+    padding: .5rem 2.5rem;
+    text-transform: uppercase;
+    color: var(--gray);
+    transition: background-color .5s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button a:hover {
+    background-color: var(--graylight);
+}
+
+/* Two */
+#two {
+    background-image: url(../images/laptop.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20rem 2rem 20rem 2rem;
+}
+
+#two p {
+    /* width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; */
+    text-align: center;
+}
+
+#two a {
+    color: var(--white-text);
+    border: 1px solid var(--white-text);
+    padding: 1rem;
+    transition: background-color .5s;
+}
+
+#two a:hover {
+    background-color: #fff;
+    color: var(--gray-text);
+
+}
+
+
+/* Three */
+#three {
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.galleryThree {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    margin: 6rem auto;
+}
+
+.imageGallery {
+    width: 50rem;
+    margin: 1rem;
+    transition: transform .5s;
+}
+
+.imageGallery img {
+    width: 100%;
+    border: 2rem solid #fff;
+}
+
+.imageGallery:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 5rem 0 4rem 0;
+    background-color: #000;
+    text-align: center;
+    color: var(--graylight);
+}
+
+footer li {
+    display: inline-block;
+    margin: 1.5rem;
+}
+
+footer a {
+    font-size: 2.5rem;
+    color: var(--graylight);
+    transition: color .2s;
+}
+
+footer a:hover {
+    color: var(--white-text);
+}
